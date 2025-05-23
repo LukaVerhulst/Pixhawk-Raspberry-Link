@@ -32,7 +32,7 @@ PX4_MODES = {
     196608: "Position",
 }
 
-def connect_pixhawk(port='/dev/ttyAMA0', baud=57600):
+def connect_pixhawk(port='/dev/serial0', baud=57600):
     """Initialize MAVLink connection"""
     master = mavutil.mavlink_connection(port, baud=baud)
     master.wait_heartbeat()
